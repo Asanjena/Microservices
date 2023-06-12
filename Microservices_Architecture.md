@@ -1,4 +1,3 @@
-# Microservices
 ## What is a Microservices Architecture - what are the use cases
 
 ![Alt text](Images/Microservices-vs-monolithic-architecture-diagram.png)
