@@ -80,7 +80,7 @@ They are simpler to develop and deploy initially (when application is not big in
 
 This is an open source platform that lets you create, deploy, and manage software applications in isolated containers. 
 
-1. Containerisation: Applications can be packaged into containers. These containers are lightweight, portable, and self-sufficient. They encapsulate the application and it's dependencies, meaning that you can acheive consistency across different environments
+1. Containerisation: Applications can be packaged into containers. These containers are lightweight, portable, and self-sufficient. They encapsulate the application and it's dependencies, meaning that you can acheive consistency across different environments. Conatiners live in container repository 
 
 2. Portability - The containers are able to run on any platform/ infrastructure that supports Docker
 
