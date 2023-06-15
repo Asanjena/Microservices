@@ -1,0 +1,22 @@
+---
+# Selecet the type of API version and type of service/object
+apiVersion: v1
+kind: Service
+# Metadata for name
+metadata:
+  name: nginx-svc
+  namespace: default # src
+
+spec:
+  ports:
+  - nodePort: 30001
+    port: 80
+
+    targetPort: 80
+
+  # Define the selector and label to connect to nginx
+
+  selector:
+    app: nginx
+
+  type: NodePort   

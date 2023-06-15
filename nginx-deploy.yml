@@ -29,7 +29,7 @@ spec:
 
     spec:
       containers:
-        name: nginx
+      - name: nginx
         image: asanjena/alema-profile:latest
         ports:
         - containerPort: 80         
