@@ -150,6 +150,26 @@ spec:
 
 
 
-## Scaling
+## Scaling in action
 
-For this, use the command
+1. For this, first use the command:
+
+```
+kubectl get deploy
+```
+
+2. You can then change the number of pods using:
+
+```
+kubectl edit deploy <deployment yml file name>
+```
+
+This will bring up notepad and you can change the replica number (making sure to save and then exit the notepad)
+
+3. If you then type:
+
+```
+kubectl get pods
+```
+
+you can see the pods displayed. 
