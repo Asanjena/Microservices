@@ -1,39 +1,39 @@
-# ---
 # # Select the type of API version and type of service/object
 # apiVersion: v1
 # kind: Service
 
 # # Metadata for name
 # metadata:
-#   name: node-svc
+#   name: mongo-svc
 #   namespace: default # sre
 
 # #Specification to include ports Selector to connect to the deployment
 # spec:
 #   ports:
-#   - nodePort: 30001
-#     port: 80
-#     targetPort: 3000
+#   - port: 27017
+#     targetPort: 27017
 
 # # Let's define the selector and label to connect to nginx depoyment
 #   selector:
-#     app: node-app # this label connects this service to deployment
+#     app: mongo # this label connects this service to deployment
 
 # # Creating NodePort type of deployment
 #   type: NodePort
 
 
----
+
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: node-svc
+  name: mongo-svc
   namespace: default
 spec:
-  type: NodePort
   ports:
-    - port: 80
-      targetPort: 3000
-      nodePort: 30002
+    #- nodePort: 30003
+    - port: 27017
+      targetPort: 27017
   selector:
-    app: node-app
+    app: mongo-app
+  type: NodePort
+

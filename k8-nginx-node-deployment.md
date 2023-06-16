@@ -150,6 +150,68 @@ spec:
 
 
 
+## Mongo deployment
+
+1. Create a mongo-deploy.yml file
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-deployment
+spec:
+  selector:
+    matchLabels:
+      app: mongo-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: mongo-app
+    spec:
+      containers:
+        - name: mongo
+          image: bradleywoods/mongo-database:v2
+          ports:
+            - containerPort: 27017
+```
+
+
+2. Create a mongo-service.yml file
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-svc
+  namespace: default
+spec:
+  ports:
+    #- nodePort: 30003
+    - port: 27017
+      targetPort: 27017
+  selector:
+    app: mongo-app
+  type: NodePort
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Scaling in action
 
 1. For this, first use the command:
