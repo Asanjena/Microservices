@@ -171,7 +171,7 @@ spec:
     spec:
       containers:
         - name: mongo
-          image: bradleywoods/mongo-database:v2
+          image: asanjena/mongo:latest
           ports:
             - containerPort: 27017
 ```
